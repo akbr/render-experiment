@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -r dist && mkdir dist && npx tsc && cp index.html ./dist",
+    "build": "rm -rf dist && mkdir dist && npx tsc && cp index.html ./dist",
     "start": "node ./dist/app.js"
   },
   "type": "module",
