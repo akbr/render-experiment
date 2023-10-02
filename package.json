@@ -4,12 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "build": "rm -r dist && mkdir dist && npx tsc && cp index.html ./dist",
+    "start": "node ./dist/app.js"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.18",
+    "@types/node": "^20.8.0",
+    "@types/ws": "^8.5.6",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
   }
 }
